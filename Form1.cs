@@ -15,7 +15,9 @@ namespace LogoKaresz
 		{
             /* Ezt indítja a START gomb! */
             // Teleport(közép.X, közép.Y+150, észak);
-            Console.WriteLine("Hello vilag!");
+            MessageBox.Show("Hello vilag!");
+			Köszön();
+
 		}
 	}
 }
