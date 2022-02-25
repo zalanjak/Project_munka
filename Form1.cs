@@ -17,6 +17,7 @@ namespace LogoKaresz
 			// Teleport(közép.X, közép.Y+150, észak);
 
 			MessageBox.Show("Simon branch");
+			Helo();
 		}
 	}
 }

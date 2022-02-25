@@ -10,9 +10,9 @@ namespace LogoKaresz
 {
     public partial class Form1
     {
-        void csumi()
+        void Helo()
         {
-             
+            MessageBox.Show("Helo");
         }
     }
 }
