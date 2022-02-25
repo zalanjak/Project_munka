@@ -13,8 +13,9 @@ namespace LogoKaresz
 		/* Függvények vége */
 		void FELADAT()
 		{
-			/* Ezt indítja a START gomb! */
-			// Teleport(közép.X, közép.Y+150, észak);
+            /* Ezt indítja a START gomb! */
+            // Teleport(közép.X, közép.Y+150, észak);
+            Console.WriteLine("Hello vilag!");
 		}
 	}
 }
