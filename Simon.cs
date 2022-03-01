@@ -13,6 +13,9 @@ namespace LogoKaresz
         void Helo()
         {
             MessageBox.Show("Helo");
+            MessageBox.Show("Előremegyek!");
+            Előre(100);
+            MessageBox.Show("Előrementem!");
         }
     }
 }
