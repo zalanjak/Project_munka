@@ -11,9 +11,13 @@ namespace LogoKaresz
     {
         void Köszön()
         {
-            MessageBox.Show("halihó");
+            MessageBox.Show("szia");
         }
 
+        void Hali()
+        {
+            MessageBox.Show("halilali");
+        }
 
     }
 }

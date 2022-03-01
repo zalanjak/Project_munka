@@ -8,12 +8,15 @@ namespace LogoKaresz
 	public partial class Form1 : Form
 	{
 		
+
+
 		void FELADAT()
 		{
 			// Teleport(közép.X, közép.Y+150, észak);
 
 			MessageBox.Show("O.o");
 			Köszön();
+			Hali();
 		}
 	}
 }
