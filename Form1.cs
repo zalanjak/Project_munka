@@ -14,7 +14,7 @@ namespace LogoKaresz
 		{
 			// Teleport(közép.X, közép.Y+150, észak);
 
-			MessageBox.Show("O.o");
+			MessageBox.Show("(づ｡◕‿‿◕｡)づ");
 			Köszön();
 			Hali();
 		}
