@@ -9,6 +9,10 @@ namespace LogoKaresz
 	{
 		/* Függvények */
 
+		void Kedvenc_szín()
+        {
+			MessageBox.Show("Zöld");
+        }
 
 		/* Függvények vége */
 		void FELADAT()
