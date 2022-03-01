@@ -18,6 +18,7 @@ namespace LogoKaresz
 
 			MessageBox.Show("Simon branch");
 			Helo();
+			Ív(180, 50);
 		}
 	}
 }
