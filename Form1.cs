@@ -13,11 +13,8 @@ namespace LogoKaresz
 		void FELADAT()
 		{
 			// Teleport(közép.X, közép.Y+150, észak);
-
-			MessageBox.Show("(づ｡◕‿‿◕｡)づ");
-			Köszön();
-			Hali();
-			MessageBox.Show("otthoni proba 1");
+			körsor(Color.Beige, Color.DarkOliveGreen);
+           
 		}
 	}
 }
