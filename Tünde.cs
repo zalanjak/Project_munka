@@ -119,9 +119,9 @@ namespace LogoKaresz
 
         void tegla_a_teglan(Color alsotegla, Color felsotegla)
         {
-            teglalap(200, 100, alsotegla);
+            teglalap(100, 200, alsotegla);
             JE(10,10);
-            teglalap(180, 80, felsotegla);
+            teglalap(80, 180, felsotegla);
         }
 
         void kicsitéglalapok_egymáson(Color alsó, Color felső)
