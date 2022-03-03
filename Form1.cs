@@ -18,8 +18,8 @@ namespace LogoKaresz
 			//kicsitéglalapok_egymáson_jobboldal(Color.Black, Color.Beige);
 			//tegla_a_teglan(Color.Black, Color.Beige);
 			//rombusz_a_teglan(Color.Black, Color.Beige);
+			//ovális_a_téglán(Color.Black, Color.Beige);
 
-			ovális_a_téglán(Color.Black, Color.Beige);
 
 
 		}
