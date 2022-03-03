@@ -15,10 +15,11 @@ namespace LogoKaresz
 		{
 			/* Ezt indítja a START gomb! */
 			// Teleport(közép.X, közép.Y+150, észak);
-
-			MessageBox.Show("Simon branch");
-			Helo();
-			Ív(180, 50);
+			//Fordulj(180);
+            using (new Frissítés(false))
+            {
+				Lóhere(100);
+			}
 		}
 	}
 }
