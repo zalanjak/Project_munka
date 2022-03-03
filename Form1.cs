@@ -16,7 +16,8 @@ namespace LogoKaresz
 			//körsor(Color.Beige, Color.DarkOliveGreen);
 			//kicsitéglalapok_egymáson(Color.Black, Color.Beige);
 			//kicsitéglalapok_egymáson_jobboldal(Color.Black, Color.Beige);
-			tegla_a_teglan(Color.Black, Color.Beige);
+			//tegla_a_teglan(Color.Black, Color.Beige);
+			rombusz_a_teglan(Color.Black, Color.Beige);
 		}
 	}
 }

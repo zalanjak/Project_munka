@@ -110,9 +110,9 @@ namespace LogoKaresz
             Odatölt(90, meret / 2, szin);
         }
 
-        void rombusz_a_teglan(Color rombusz_szin, Color teglalap_szin)
+        void rombusz_a_teglan( Color teglalap_szin, Color rombusz_szin)
         {
-            teglalap(155, 130, teglalap_szin);
+            teglalap(130, 155, teglalap_szin);
             Előre(65);
             rombusz(100, rombusz_szin);
         }
