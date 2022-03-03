@@ -17,6 +17,7 @@ namespace LogoKaresz
 			MessageBox.Show("(づ｡◕‿‿◕｡)づ");
 			Köszön();
 			Hali();
+			MessageBox.Show("otthoni proba 1");
 		}
 	}
 }
