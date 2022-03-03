@@ -13,8 +13,9 @@ namespace LogoKaresz
 		void FELADAT()
 		{
 			// Teleport(közép.X, közép.Y+150, észak);
-			körsor(Color.Beige, Color.DarkOliveGreen);
-           
+			//körsor(Color.Beige, Color.DarkOliveGreen);
+			//kicsitéglalapok_egymáson(Color.Black, Color.Beige);
+			kicsitéglalapok_egymáson_jobboldal(Color.Black, Color.Beige);
 		}
 	}
 }

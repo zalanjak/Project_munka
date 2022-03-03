@@ -131,6 +131,13 @@ namespace LogoKaresz
             teglalap(80, 30, felső);
         }
 
+        void kicsitéglalapok_egymáson_jobboldal(Color alsó, Color felső)
+        {
+            teglalap(100, 40, alsó);
+            JE(10, 10);
+            teglalap(80, 30, felső);
+        }
+
         void körsor(Color alap, Color körök)
         {
             for (int i = 0; i < 4; i++)
