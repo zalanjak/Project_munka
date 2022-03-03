@@ -18,7 +18,7 @@ namespace LogoKaresz
 			//Fordulj(180);
             using (new Frissítés(false))
             {
-				Lóhere(100);
+				Három_lóhere(200);
 			}
 		}
 	}

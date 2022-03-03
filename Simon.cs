@@ -65,10 +65,38 @@ namespace LogoKaresz
             Jobbra(30);
             for (int i = 0; i < 3; i++)
             {
-                Ív(240, 10);
+                Ív(240, m / 10);
                 Balra(120);
             }
-            
+            Balra(30);
+        }
+        void Három_lóhere(double m)
+        {
+            Lóhere(m / 1.5);//Első
+            for (int i = 0; i < 3; i++)
+            {
+                using (new Rajzol(false))
+                    Ív(180, m / 20);
+                Fordulj(180);
+            }
+            Lóhere(m / 1.5);//Második
+            Jobbra(30);
+            Ív(240, m / 15);
+            Balra(120);
+            Ív(120, m / 15);
+            Jobbra(90);
+            for (int i = 0; i < 3; i++)
+            {
+                using (new Rajzol(false))
+                    Ív_balra(180, m / 40);
+                Fordulj(180);
+            }
+            Balra(6);
+            Fordulj(180);
+            using (new Rajzol(false))
+                Előre(m / 20);
+            Fordulj(180);
+            Lóhere(m / 1.5);//Harmadik
         }
     }
 }
