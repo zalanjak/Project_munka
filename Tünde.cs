@@ -15,10 +15,7 @@ namespace LogoKaresz
             MessageBox.Show("szia");
         }
 
-        void Hali()
-        {
-            MessageBox.Show("halilali");
-        }
+       
 
         void oldalazz(double meret)
         {
@@ -148,6 +145,39 @@ namespace LogoKaresz
                 JE(-10, -50);
                 oldalazz(100);
             }
+        }
+
+        void félkör_balra(double magasság, Color szin)
+        {
+            Tollszín(szin);
+            Előre(magasság);
+            Hátra(magasság);
+            Balra(90);
+            Ív(180, magasság / 2);
+            Jobbra(90);
+            Odatölt(20, magasság / 2, szin);
+            Előre(magasság);
+            Jobbra(180);
+        }
+
+        void félkör_jobbra(double magasság, Color szin)
+        {
+            Tollszín(szin);
+            Előre(magasság);
+            Jobbra(90);
+            Ív(180, magasság / 2);
+            Jobbra(90);
+            Odatölt(30, magasság / 2, szin);
+        }
+
+        void ovális_a_téglán(Color alap, Color ovális)
+        {
+            teglalap(110, 220,alap);
+            JE(60, 5);
+            félkör_balra(100, ovális);
+            negyzet(100, ovális);
+            oldalazz(100);
+            félkör_jobbra(100, ovális);
         }
     }
 }
