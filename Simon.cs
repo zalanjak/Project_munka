@@ -57,9 +57,9 @@ namespace LogoKaresz
                     Ív(180, m / 25);
             }
         }
-        #endregion 
+        #endregion
         //Nudlik
-
+        #region
         void Lóhere(double m)
         {
             Jobbra(30);
@@ -97,6 +97,31 @@ namespace LogoKaresz
                 Előre(m / 20);
             Fordulj(180);
             Lóhere(m / 1.5);//Harmadik
+            using (new Rajzol(false))
+                Előre(m / 20);
+            Balra(90);
+            Ív(360, m / 20);
+        }
+        #endregion
+        //Lóherék
+        void Alakzat(double m)
+        {
+            Nudlik(m);
+            for (int i = 0; i < 5; i++)
+            {
+                using (new Rajzol(false))
+                    Ív(180, m / 25);
+                Balra(180);
+                
+            }
+            using (new Rajzol(false))
+            {
+                hullámosVonal_jobbra(m);
+                Balra(90);
+                Ív(180, m / 20);
+                Jobbra(90);
+            }
+            Három_lóhere(m); 
         }
     }
 }
