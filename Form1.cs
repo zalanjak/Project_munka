@@ -23,10 +23,24 @@ namespace LogoKaresz
 			//téglasor(Color.Black, Color.Beige, 50);
 			//pöttysor_alappal(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, 10, 20);
 
-
+			/*
 			pöttysor_alappal(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, 17, 30);
 			lopakodva_előre(30 * 1.5);
 			téglasor(Color.Black, Color.Beige, 60);
+			*/
+
+			//kereszt(50, Color.Black);
+			//országalma(20, Color.Black);
+
+
+
+
+
+
+
+
+
+
 
 		}
 	}

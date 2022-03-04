@@ -73,7 +73,7 @@ namespace LogoKaresz
                 Előre(vizszintesoldal);
                 Jobbra(90);
             }
-            Odatölt(45, fuggolegesoldal / 2, szin);
+            Odatölt(45, fuggolegesoldal / 3, szin);
         }
 
         void negyzet(double meret, Color szin)
@@ -219,6 +219,41 @@ namespace LogoKaresz
 
 
 
+        void kereszt_darab(double hosszabb, double rövidebb, Color szin)
+        {
+            teglalap(hosszabb, rövidebb, szin);
+            lopakodva_előre(hosszabb);
+            Jobbra(90);
+            félkör_balra(rövidebb, szin);
+            Balra(90);
+            lopakodva_előre(-hosszabb);
+        }
+
+        void kereszt(double meret, Color szin)
+        {
+           
+            kereszt_darab(meret*2.50, meret, szin);
+            lopakodva_előre(meret);
+            Balra(90);
+            kereszt_darab(meret*0.50, meret, szin);
+            lopakodva_előre(-meret);
+            Jobbra(90);
+            lopakodva_előre(meret);
+            Jobbra(90);
+            kereszt_darab(meret*0.50, meret, szin);
+            oldalazz(meret*2);
+            lopakodva_előre(-meret);
+            Balra(90);
+        }
+
+        void országalma(double meret, Color szin)
+        {
+            kör(meret, szin);
+            Ív(45, meret/2);
+            Balra(80);
+            lopakodva_előre(-meret/10);
+            kereszt(meret/3, szin);
+        }
 
     }
 }
