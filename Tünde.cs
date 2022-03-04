@@ -13,9 +13,7 @@ namespace LogoKaresz
         void Köszön()
         {
             MessageBox.Show("szia");
-        }
-
-       
+        }     
 
         void oldalazz(double meret)
         {
@@ -23,6 +21,13 @@ namespace LogoKaresz
             Jobbra(90);
             Előre(meret);
             Balra(90);
+            Tollat(le);
+        }
+
+       void lopakodva_előre(double meret)
+        {
+            Tollat(fel);
+            Előre(meret);
             Tollat(le);
         }
 
@@ -68,20 +73,20 @@ namespace LogoKaresz
                 Előre(vizszintesoldal);
                 Jobbra(90);
             }
-            Odatölt(45, vizszintesoldal / 2, szin);
+            Odatölt(45, fuggolegesoldal / 2, szin);
         }
 
-        void negyzet(double a, Color szin)
+        void negyzet(double meret, Color szin)
         {
             Tollszín(szin);
             for (int i = 0; i < 2; i++)
             {
-                Előre(a);
+                Előre(meret);
                 Jobbra(90);
-                Előre(a);
+                Előre(meret);
                 Jobbra(90);
             }
-            Odatölt(45, a / 2, szin);
+            Odatölt(45, meret / 2, szin);
         }
 
         void rombusz(double meret, Color szin)
@@ -107,44 +112,48 @@ namespace LogoKaresz
             Odatölt(90, meret / 2, szin);
         }
 
-        void rombusz_a_teglan( Color teglalap_szin, Color rombusz_szin)
+        void rombusz_a_teglan( Color teglalap_szin, Color rombusz_szin, double meret)
         {
-            teglalap(130, 155, teglalap_szin);
-            Előre(65);
-            rombusz(100, rombusz_szin);
+            teglalap(meret, meret*1.17, teglalap_szin);
+            lopakodva_előre(meret/2);
+            rombusz(meret*0.76, rombusz_szin);
+            lopakodva_előre(-meret / 2);
         }
 
-        void tegla_a_teglan(Color alsotegla, Color felsotegla)
+        void tegla_a_teglan(Color alsotegla, Color felsotegla, double meret)
         {
-            teglalap(100, 200, alsotegla);
-            JE(10,10);
-            teglalap(80, 180, felsotegla);
+            teglalap(meret, meret*1.60, alsotegla);
+            JE(meret/10,meret/10);
+            teglalap(meret*0.80, meret*1.40, felsotegla);
+            JE(-meret / 10, -meret / 10);
         }
 
-        void kicsitéglalapok_egymáson(Color alsó, Color felső)
+        void kicsitéglalapok_egymáson(Color alsó, Color felső, double meret)
         {
-            teglalap(100, 40, alsó);
-            Előre(10);
-            teglalap(80, 30, felső);
+            teglalap(meret, meret*0.40, alsó);
+            Előre(meret/10);
+            teglalap(meret *0.80, meret *0.30, felső);
+            Hátra(meret / 10);
         }
 
-        void kicsitéglalapok_egymáson_jobboldal(Color alsó, Color felső)
+        void kicsitéglalapok_egymáson_jobboldal(Color alsó, Color felső, double meret)
         {
-            teglalap(100, 40, alsó);
-            JE(10, 10);
-            teglalap(80, 30, felső);
+            teglalap(meret, meret*0.40, alsó);
+            JE(meret/10, meret/10);
+            teglalap(meret*0.80, meret *0.30, felső);
         }
 
-        void körsor(Color alap, Color körök)
+        void körsor(Color alap, Color körök, int db, double meret)
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < db; i++)
             {
-                negyzet(100, alap);
-                JE(10, 50);
-                kör(80, körök);
-                JE(-10, -50);
-                oldalazz(100);
+                teglalap(meret, meret*1.3, alap);
+                JE(meret/3, meret/2);
+                kör(meret*0.6, körök);
+                JE(-meret/3, -meret/2);
+                oldalazz(meret*1.3);
             }
+            oldalazz(-meret * db);
         }
 
         void félkör_balra(double magasság, Color szin)
@@ -170,14 +179,46 @@ namespace LogoKaresz
             Odatölt(30, magasság / 2, szin);
         }
 
-        void ovális_a_téglán(Color alap, Color ovális)
+        void ovális_a_téglán(Color alap, Color ovális, double meret)
         {
-            teglalap(110, 220,alap);
-            JE(60, 5);
-            félkör_balra(100, ovális);
-            negyzet(100, ovális);
-            oldalazz(100);
-            félkör_jobbra(100, ovális);
+            teglalap(meret, meret*1.6,alap);
+            JE(meret*0.55, meret*0.05);
+            félkör_balra(meret*0.90, ovális);
+            teglalap(meret*0.90,meret*0.5, ovális);
+            oldalazz(meret*0.50);
+            félkör_jobbra(meret*0.90, ovális);
+            JE(-(meret * 0.90+ meret * 0.55), -meret * 0.05);
         }
+
+        void téglasor(Color alap, Color felső, double meret)
+        {
+            kicsitéglalapok_egymáson(alap, felső, meret);
+            oldalazz(meret*0.40 + meret*0.30);
+            rombusz_a_teglan(alap, felső, meret);
+            oldalazz(meret*1.17 + meret *0.30);
+            tegla_a_teglan(alap, felső, meret);
+            oldalazz(meret*1.6 + meret*0.30);
+            ovális_a_téglán(alap, felső, meret);
+            oldalazz(meret * 2 + meret *0.30);
+            tegla_a_teglan(alap, felső, meret);
+            oldalazz(meret*1.6 + meret*0.30);
+            rombusz_a_teglan(alap, felső, meret);
+            oldalazz(meret*1.17 + meret*0.30);
+            kicsitéglalapok_egymáson_jobboldal(alap, felső, meret);
+        }
+
+        void pöttysor_alappal(Color alap, Color pöttyalap, Color pötty, int db, double meret)
+        {
+            körsor(pöttyalap, pötty, db, meret);
+            lopakodva_előre(meret);
+            teglalap(meret*3, db * (meret*1.3), alap);
+            Előre(meret*3);
+            körsor(pöttyalap, pötty, db, meret);
+            lopakodva_előre(-meret*3 + -meret);
+        }
+
+
+
+
     }
 }
