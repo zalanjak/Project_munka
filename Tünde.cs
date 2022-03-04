@@ -118,29 +118,34 @@ namespace LogoKaresz
             lopakodva_előre(meret/2);
             rombusz(meret*0.76, rombusz_szin);
             lopakodva_előre(-meret / 2);
+            oldalazz(meret * 1.17);
         }
 
         void tegla_a_teglan(Color alsotegla, Color felsotegla, double meret)
         {
-            teglalap(meret, meret*1.60, alsotegla);
+            teglalap(meret, meret*1.8, alsotegla);
             JE(meret/10,meret/10);
-            teglalap(meret*0.80, meret*1.40, felsotegla);
+            teglalap(meret*0.80, meret*1.60, felsotegla);
             JE(-meret / 10, -meret / 10);
+            oldalazz(meret * 1.8);
         }
 
         void kicsitéglalapok_egymáson(Color alsó, Color felső, double meret)
         {
-            teglalap(meret, meret*0.40, alsó);
+            teglalap(meret, meret*0.45, alsó);
             Előre(meret/10);
-            teglalap(meret *0.80, meret *0.30, felső);
+            teglalap(meret *0.80, meret *0.35, felső);
             Hátra(meret / 10);
+            oldalazz(meret * 0.45);
         }
 
         void kicsitéglalapok_egymáson_jobboldal(Color alsó, Color felső, double meret)
         {
-            teglalap(meret, meret*0.40, alsó);
+            teglalap(meret, meret*0.45, alsó);
             JE(meret/10, meret/10);
-            teglalap(meret*0.80, meret *0.30, felső);
+            teglalap(meret*0.80, meret *0.35, felső);
+            JE(-(meret / 10), -(meret / 10));
+            oldalazz(meret * 0.45);
         }
 
         void körsor(Color alap, Color körök, int db, double meret)
@@ -153,7 +158,7 @@ namespace LogoKaresz
                 JE(-meret/3, -meret/2);
                 oldalazz(meret*1.3);
             }
-            oldalazz(-meret * db);
+            oldalazz(-(meret *1.3* db));
         }
 
         void félkör_balra(double magasság, Color szin)
@@ -181,29 +186,36 @@ namespace LogoKaresz
 
         void ovális_a_téglán(Color alap, Color ovális, double meret)
         {
-            teglalap(meret, meret*1.6,alap);
-            JE(meret*0.55, meret*0.05);
-            félkör_balra(meret*0.90, ovális);
-            teglalap(meret*0.90,meret*0.5, ovális);
-            oldalazz(meret*0.50);
-            félkör_jobbra(meret*0.90, ovális);
-            JE(-(meret * 0.90+ meret * 0.55), -meret * 0.05);
+            double egypontnyolc = 1.8;
+            double nullaponthet = 0.7;
+            double nullapontotot = 0.55;
+            double nullapontkilenc = 0.9;
+            double nullapontnullaot = 0.05;
+
+            teglalap(meret, meret*egypontnyolc,alap);
+            JE(meret*nullapontotot, meret*nullapontnullaot);
+            félkör_balra(meret*nullapontkilenc, ovális);
+            teglalap(meret*nullapontkilenc,meret*nullaponthet, ovális);
+            oldalazz(meret*nullaponthet);
+            félkör_jobbra(meret*nullapontkilenc, ovális);
+            JE(-(meret * nullaponthet+ meret * nullapontotot), -meret * nullapontnullaot);
+            oldalazz(meret * egypontnyolc);
         }
 
         void téglasor(Color alap, Color felső, double meret)
         {
             kicsitéglalapok_egymáson(alap, felső, meret);
-            oldalazz(meret*0.40 + meret*0.30);
+            oldalazz(meret*0.40);
             rombusz_a_teglan(alap, felső, meret);
-            oldalazz(meret*1.17 + meret *0.30);
+            oldalazz( meret *0.40);
             tegla_a_teglan(alap, felső, meret);
-            oldalazz(meret*1.6 + meret*0.30);
+            oldalazz( meret*0.40);
             ovális_a_téglán(alap, felső, meret);
-            oldalazz(meret * 2 + meret *0.30);
+            oldalazz( meret *0.40);
             tegla_a_teglan(alap, felső, meret);
-            oldalazz(meret*1.6 + meret*0.30);
+            oldalazz( meret*0.40);
             rombusz_a_teglan(alap, felső, meret);
-            oldalazz(meret*1.17 + meret*0.30);
+            oldalazz(meret*0.40);
             kicsitéglalapok_egymáson_jobboldal(alap, felső, meret);
         }
 
@@ -212,10 +224,21 @@ namespace LogoKaresz
             körsor(pöttyalap, pötty, db, meret);
             lopakodva_előre(meret);
             teglalap(meret*3, db * (meret*1.3), alap);
-            Előre(meret*3);
+            lopakodva_előre(meret*3);
             körsor(pöttyalap, pötty, db, meret);
             lopakodva_előre(-meret*3 + -meret);
+            
         }
+
+        void koronaközép(Color alap, Color pöttyalap, Color pötty, Color téglaalap, double meret)
+        {
+            pöttysor_alappal(alap, pöttyalap, pötty, 17, meret);
+            lopakodva_előre(meret * 1.5);
+            téglasor(téglaalap, pöttyalap, meret*2);
+            lopakodva_előre(-meret * 1.5);
+            oldalazz(-17 * meret*1.3);
+        }
+
 
 
 
