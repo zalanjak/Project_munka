@@ -19,17 +19,19 @@ namespace LogoKaresz
 			//tegla_a_teglan(Color.Black, Color.Beige,100);
 			//rombusz_a_teglan(Color.Black, Color.Beige, 100);
 			//ovális_a_téglán(Color.Black, Color.Beige, 100);
-
 			//téglasor(Color.Black, Color.Beige, 50);
 			//pöttysor_alappal(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, 10, 20);
 
-
-			koronaközép(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, Color.Black, 30);
-			
-			
+			koronaközép(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, Color.Black, 20);
+			lopakodva_előre(5 * 20);
+			oldalazz(7);
+			koronateteje(38.5, Color.Beige);
 
 			//kereszt(50, Color.Black);
-			//országalma(20, Color.Black);
+			
+			//országalma(50, Color.Black);
+			//oldalazz(200);
+			//kör(50, Color.Black);
 
 
 

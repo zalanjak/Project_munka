@@ -65,6 +65,7 @@ namespace LogoKaresz
 
         void teglalap( double fuggolegesoldal, double vizszintesoldal, Color szin)
         {
+            
             Tollszín(szin);
             for (int i = 0; i < 2; i++)
             {
@@ -73,7 +74,7 @@ namespace LogoKaresz
                 Előre(vizszintesoldal);
                 Jobbra(90);
             }
-            Odatölt(45, fuggolegesoldal / 3, szin);
+            Odatölt(45, fuggolegesoldal / 2, szin);
         }
 
         void negyzet(double meret, Color szin)
@@ -271,12 +272,77 @@ namespace LogoKaresz
 
         void országalma(double meret, Color szin)
         {
+            Balra(90);
             kör(meret, szin);
-            Ív(45, meret/2);
+            Ív(30+90, meret/2);
             Balra(80);
             lopakodva_előre(-meret/10);
             kereszt(meret/3, szin);
+            lopakodva_előre(meret / 10);
+            Jobbra(80);
+            Ív(360-30-90, meret / 2);
         }
+
+        void koronateteje( double meret, Color szin)
+        {
+            float tollvastag = 14;
+            Tollvastagság(tollvastag);
+            /*
+            Tollszín(Color.Pink);
+            Előre(20);          
+            Jobbra(30);
+            Előre(3 * 20);
+            Jobbra(30);
+            Előre(4 * 20);
+            Jobbra(30);
+            Előre(5 * 20);
+            Jobbra(30);
+            Előre(4 * 20);
+            Jobbra(30);
+            Előre(3 * 20);
+            Jobbra(30);
+            Előre(20);
+            Jobbra(180);
+            Tollszín(Color.Black);
+            */
+            for (int i = 0; i < 15; i++)
+            {
+                Tollszín(szin);
+                Előre(meret);
+                Tollvastagság(1);
+                Balra(160);
+                if (i==7)
+                {
+                    Jobbra(90);
+                    országalma(25,szin);
+                    
+                }
+                else
+                {
+                    kör(meret/2.5, szin);
+                }
+                
+                Jobbra(160);
+                Tollvastagság(tollvastag);
+                if (i==0||i==2||i==5||i==9||i==12||i==14)
+                {
+                    Jobbra(30);
+                }
+                
+            }
+            Előre(meret);
+            Tollvastagság(1);
+        }
+
+        void koronakozeptetovel()
+        {
+            koronaközép(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, Color.Black, 20);
+            lopakodva_előre(5 * 20);
+            oldalazz(7);
+            koronateteje(38.5, Color.Beige);
+        }
+
+
 
     }
 }
