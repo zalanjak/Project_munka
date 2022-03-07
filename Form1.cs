@@ -22,13 +22,13 @@ namespace LogoKaresz
             using (new Frissítés(false))
             {
 				//Jobbra(90);
-				//Sátor(200, Color.DarkOliveGreen, Color.Beige);
-				Búrasátor(200, Color.DarkOliveGreen, Color.Beige);
+				Alakzat(200, Color.DarkOliveGreen);
+				/*Búrasátor(200, Color.DarkOliveGreen, Color.Beige);
 				Jobbra(90);
 				using(new Rajzol(false))
 					Előre(100);
 				Balra(90);
-				Sátorbúra(200, Color.DarkOliveGreen, Color.Beige);
+				Sátorbúra(200, Color.DarkOliveGreen, Color.Beige);*/
 			}
 		}
 	}

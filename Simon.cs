@@ -61,7 +61,10 @@ namespace LogoKaresz
         }
         void Nudlik(double m, Color szín)
         {
-            Fordulj(180);
+            Jobbra(90);
+            Előre(m / 2.61);
+            Hátra(m / 2.61);
+            Jobbra(90);
             for (int i = 0; i < 3; i++)
             {
                 Görbe_nudli(m, szín);
@@ -118,7 +121,7 @@ namespace LogoKaresz
         }
         #endregion
         //Lóherék
-        void Alakzat(double m, Color szín, Color szín2)
+        void Alakzat(double m, Color szín)
         {
             Nudlik(m, szín);
             for (int i = 0; i < 5; i++)
