@@ -22,7 +22,7 @@ namespace LogoKaresz
             using (new Frissítés(false))
             {
 				//Jobbra(90);
-				Alakzat(200, Color.DarkOliveGreen);
+				Alakzat(150, Color.DarkOliveGreen);
 				/*Búrasátor(200, Color.DarkOliveGreen, Color.Beige);
 				Jobbra(90);
 				using(new Rajzol(false))

@@ -54,7 +54,7 @@ namespace LogoKaresz
                 Előre(m / 2.5);
             Fordulj(180);
             hullámosVonal_jobbra(m);
-            Odatölt(30, m / 30, szín);
+            Odatölt(40, m / 30, szín);
             Fordulj(180);
             using (new Rajzol(false))
                 Előre(m / 2.5);
@@ -139,6 +139,23 @@ namespace LogoKaresz
                 Jobbra(91);
             }
             Három_lóhere(m, szín);
+            Balra(90);
+            using(new Rajzol (false))
+                Előre(m / 20);
+            Jobbra(150);
+             using(new Rajzol (false))
+                Előre(m / 3.5);
+             Jobbra(30);
+            using (new Rajzol(false))
+            {
+                hullámosVonal_jobbra(m / 0.99);
+                Balra(90);
+                Ív(180, m / 20);
+                Jobbra(91);
+            }
+            Jobbra(90);
+            Előre(m / 16);
+            Balra(90);
         }
 
         void Búra(double m, Color szín, Color szín2)
