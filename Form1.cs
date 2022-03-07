@@ -1,7 +1,10 @@
 ﻿using System;
-using System.Drawing;
-using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace LogoKaresz
 {
@@ -18,8 +21,14 @@ namespace LogoKaresz
 			//Fordulj(180);
             using (new Frissítés(false))
             {
-				Alakzat(100);
-				
+				//Jobbra(90);
+				//Sátor(200, Color.DarkOliveGreen, Color.Beige);
+				Búrasátor(200, Color.DarkOliveGreen, Color.Beige);
+				Jobbra(90);
+				using(new Rajzol(false))
+					Előre(100);
+				Balra(90);
+				Sátorbúra(200, Color.DarkOliveGreen, Color.Beige);
 			}
 		}
 	}
