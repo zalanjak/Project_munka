@@ -314,7 +314,7 @@ namespace LogoKaresz
                 if (i==7)
                 {
                     Jobbra(90);
-                    országalma(25,szin);
+                    országalma(meret/1.4,szin);
                     
                 }
                 else
@@ -332,6 +332,19 @@ namespace LogoKaresz
             }
             Előre(meret);
             Tollvastagság(1);
+            Tollat(fel);
+            Jobbra(180);
+            for (int i = 0; i < 15; i++)
+            {
+                Előre(meret);
+                if (i == 0 || i == 2 || i == 5 || i == 9 || i == 12 || i == 14)
+                {
+                    Jobbra(-30);
+                }
+            }
+            Előre(meret);
+            Jobbra(180);
+            Tollat(le);
         }
 
         void koronakozeptetovel()
