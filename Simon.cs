@@ -237,7 +237,7 @@ namespace LogoKaresz
             using(new Rajzol(false))
                 Előre(m / 25);
             Fordulj(180);
-            Lóhere(m / 2, Color.White);
+            Lóhere(m / 2, szín);
             Odatölt(0, m / 30, szín);
             Odatölt(-180, m / 40, szín2);
             using(new Rajzol(false))
@@ -256,6 +256,44 @@ namespace LogoKaresz
         {
             Sátor(m / 1.2, szín, szín2);
             Búra(m, szín, szín2);
+        }
+        void Királykörítés(double m, Color szín)
+        {
+            Előre(m / 1.3);//Téglalap
+            Jobbra(90);
+            Előre(m / 15);
+            Jobbra(90);
+            Előre(m / 1.3);
+            Jobbra(90);
+            Előre(m / 15);
+            Jobbra(180);
+            Előre(m / 15);
+            Balra(90);
+            Odatölt(-45, m / 20, szín);
+            Előre(m / 3);//A király búrája
+            Ív(180, m / 5);
+            Előre(m / 3);
+            Balra(90);
+            Előre(m / 15);
+            Balra(90);
+            Előre(m / 1.3);
+            Balra(90);
+            Előre(m / 15);
+            Balra(90);
+            Előre(m / 1.3);
+            Fordulj(180);
+            Előre(m / 2.25);
+            Balra(90);
+            using(new Rajzol(false))
+                Előre(m / 2.5);
+            Jobbra(90);
+            Ív(80, m / 5);
+            Balra(120);
+            Ív(265, m / 20);
+            Balra(124);
+            Ív(80, m / 5);
+            Odatölt(100, m / 35, szín);
+            Odatölt(-90, m / 20, szín);
         }
     }
 }
