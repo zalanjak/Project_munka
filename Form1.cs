@@ -25,7 +25,7 @@ namespace LogoKaresz
 
 
 			//kereszt(50, Color.Black);
-
+			//koronateteje(40,14, Color.Beige);
 			//országalma(50, Color.Black);
 			//oldalazz(200);
 			//kör(50, Color.Black);
@@ -35,7 +35,7 @@ namespace LogoKaresz
 			oldalazz(7);
 			koronateteje(38.5, Color.Beige);
 			*/
-			koronateteje(40, Color.Beige);
+			koronakozeptetovel(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, 14, 20);
 
 
 

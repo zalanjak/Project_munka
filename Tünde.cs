@@ -102,7 +102,7 @@ namespace LogoKaresz
                 Előre(meret);
                 Jobbra(100);
             }
-            Odatölt(10, meret / 3, szin);
+            Odatölt(20, meret / 3, szin);
             Balra(50);
         }
 
@@ -283,10 +283,10 @@ namespace LogoKaresz
             Ív(360-30-90, meret / 2);
         }
 
-        void koronateteje( double meret, Color szin)
+        void koronateteje( double meret, float tvastagság, Color szin)
         {
-            float tollvastag = 14;
-            Tollvastagság(tollvastag);
+            //float tollvastag = 14;
+            Tollvastagság(tvastagság);
             /*
             Tollszín(Color.Pink);
             Előre(20);          
@@ -323,7 +323,7 @@ namespace LogoKaresz
                 }
                 
                 Jobbra(160);
-                Tollvastagság(tollvastag);
+                Tollvastagság(tvastagság);
                 if (i==0||i==2||i==5||i==9||i==12||i==14)
                 {
                     Jobbra(30);
@@ -347,12 +347,12 @@ namespace LogoKaresz
             Tollat(le);
         }
 
-        void koronakozeptetovel()
+        void koronakozeptetovel(Color hatterszin, Color alapszin, Color pöttyszin, float tetoív_vastagsag,double meret)
         {
-            koronaközép(Color.SaddleBrown, Color.Beige, Color.DarkOliveGreen, Color.Black, 20);
-            lopakodva_előre(5 * 20);
-            oldalazz(7);
-            koronateteje(38.5, Color.Beige);
+            koronaközép(hatterszin, alapszin, pöttyszin, Color.Black, meret);//20
+            lopakodva_előre(5 * meret);
+            oldalazz(tetoív_vastagsag/2);
+            koronateteje(meret*1.92,tetoív_vastagsag, alapszin);//38.5
         }
 
 
